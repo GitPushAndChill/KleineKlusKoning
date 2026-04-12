@@ -1,0 +1,14 @@
+{
+  "name": "de-kleine-klus-koning",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.0.8"
+  }
+}

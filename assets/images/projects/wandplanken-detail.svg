@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Detailfoto wandplanken in Hoofddorp</title>
+  <desc id="desc">Close-up illustratie van wandplanken met decoratie en stevige bevestiging.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15283a"/>
+      <stop offset="100%" stop-color="#40627f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="44" fill="url(#bg)"/>
+  <rect x="120" y="130" width="960" height="640" rx="34" fill="#f6ebd8"/>
+  <rect x="250" y="240" width="460" height="38" rx="19" fill="#9c6116"/>
+  <rect x="250" y="458" width="520" height="38" rx="19" fill="#9c6116"/>
+  <rect x="318" y="278" width="20" height="96" rx="10" fill="#d38f2b"/>
+  <rect x="618" y="278" width="20" height="96" rx="10" fill="#d38f2b"/>
+  <rect x="358" y="496" width="20" height="96" rx="10" fill="#d38f2b"/>
+  <rect x="668" y="496" width="20" height="96" rx="10" fill="#d38f2b"/>
+  <circle cx="382" cy="200" r="72" fill="#f5a300" opacity="0.25"/>
+  <rect x="830" y="266" width="118" height="210" rx="24" fill="#1f5f8b"/>
+  <rect x="860" y="210" width="60" height="70" rx="24" fill="#ffd37e"/>
+  <rect x="820" y="506" width="170" height="86" rx="22" fill="#314f6b"/>
+  <circle cx="355" cy="222" r="36" fill="#264056"/>
+  <rect x="438" y="188" width="124" height="68" rx="20" fill="#ffffff" opacity="0.92"/>
+  <text x="150" y="92" fill="#fff4df" font-family="Arial, sans-serif" font-size="42" font-weight="700">Detail van stevige plankmontage</text>
+  <text x="150" y="820" fill="#223e59" font-family="Arial, sans-serif" font-size="34">Extra foto voor projectgalerij met close-up van bevestiging en styling</text>
+</svg>

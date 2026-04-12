@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Schutting onderhoud in Hoofddorp</title>
+  <desc id="desc">Visual van een onderhouden schutting met tuinaccenten.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#20384d"/>
+      <stop offset="100%" stop-color="#5f8e66"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9b5c19"/>
+      <stop offset="100%" stop-color="#c98b38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="44" fill="url(#sky)"/>
+  <rect x="0" y="620" width="1200" height="280" fill="#355a32"/>
+  <rect x="90" y="180" width="1020" height="600" rx="34" fill="#f8efd9" opacity="0.15"/>
+  <g>
+    <rect x="180" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="280" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="380" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="480" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="580" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="680" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="780" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+    <rect x="880" y="250" width="80" height="380" rx="18" fill="url(#wood)"/>
+  </g>
+  <rect x="160" y="320" width="830" height="28" rx="14" fill="#6c3f10"/>
+  <rect x="160" y="520" width="830" height="28" rx="14" fill="#6c3f10"/>
+  <path d="M955 360c52 28 86 89 86 161" fill="none" stroke="#f5a300" stroke-width="24" stroke-linecap="round"/>
+  <path d="M955 360l76 6-42 63" fill="none" stroke="#f5a300" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="225" cy="690" r="38" fill="#1f5f8b"/>
+  <circle cx="312" cy="710" r="30" fill="#f5a300"/>
+  <circle cx="392" cy="692" r="34" fill="#2d7b49"/>
+  <text x="170" y="140" fill="#fff5df" font-family="Arial, sans-serif" font-size="42" font-weight="700">Onderhoud van schutting en tuinrand</text>
+  <text x="170" y="770" fill="#fdf8ed" font-family="Arial, sans-serif" font-size="36">Bescherming, versteviging en een frisse uitstraling voor buitenwerk</text>
+</svg>

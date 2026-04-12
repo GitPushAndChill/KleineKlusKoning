@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Keuken afwerking in Hoofddorp</title>
+  <desc id="desc">Afbeelding van een nette keukenafwerking met gemonteerde accessoires.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d364c"/>
+      <stop offset="100%" stop-color="#4e6f8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="44" fill="url(#bg)"/>
+  <rect x="130" y="120" width="940" height="660" rx="38" fill="#f8f0e0"/>
+  <rect x="220" y="260" width="760" height="300" rx="34" fill="#fffaf1"/>
+  <rect x="250" y="590" width="700" height="90" rx="28" fill="#314f6b"/>
+  <rect x="290" y="320" width="180" height="190" rx="18" fill="#cfd7df"/>
+  <rect x="500" y="320" width="180" height="190" rx="18" fill="#e7d1a0"/>
+  <rect x="710" y="320" width="180" height="190" rx="18" fill="#cfd7df"/>
+  <circle cx="566" cy="415" r="54" fill="#f5a300"/>
+  <rect x="790" y="210" width="90" height="36" rx="18" fill="#f5a300"/>
+  <rect x="806" y="246" width="14" height="72" rx="7" fill="#d78600"/>
+  <rect x="850" y="246" width="14" height="72" rx="7" fill="#d78600"/>
+  <rect x="220" y="690" width="760" height="18" rx="9" fill="#d3bf99"/>
+  <text x="180" y="170" fill="#fff5df" font-family="Arial, sans-serif" font-size="42" font-weight="700">Keuken netjes afgewerkt</text>
+  <text x="180" y="740" fill="#304a67" font-family="Arial, sans-serif" font-size="36">Accessoires gemonteerd en details verzorgd voor dagelijks gebruik</text>
+</svg>
