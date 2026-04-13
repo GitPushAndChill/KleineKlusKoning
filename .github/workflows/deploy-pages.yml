@@ -48,6 +48,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment: ${{ format('{0}{1}', 'github', '-pages') }}
 
     steps:
       - name: Deploy to GitHub Pages
