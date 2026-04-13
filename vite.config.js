@@ -4,6 +4,17 @@ import { defineConfig } from "vite";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+function normalizeBasePath(basePath = "/") {
+    if (!basePath || basePath === "/") {
+        return "/";
+    }
+
+    const withLeadingSlash = basePath.startsWith("/") ? basePath : `/${basePath}`;
+    return withLeadingSlash.endsWith("/") ? withLeadingSlash : `${withLeadingSlash}/`;
+}
+
+const siteBase = normalizeBasePath(process.env.SITE_BASE);
+
 const htmlRoutes = new Map([
     ["/", "/index.html"],
     ["/portfolio", "/portfolio/index.html"],
@@ -11,7 +22,10 @@ const htmlRoutes = new Map([
     ["/portfolio.html", "/portfolio/index.html"],
     ["/contact", "/contact/index.html"],
     ["/contact/", "/contact/index.html"],
-    ["/contact.html", "/contact/index.html"]
+    ["/contact.html", "/contact/index.html"],
+    ["/contact/bedankt", "/contact/bedankt/index.html"],
+    ["/contact/bedankt/", "/contact/bedankt/index.html"],
+    ["/contact/bedankt.html", "/contact/bedankt/index.html"]
 ]);
 
 function htmlRouteAliases() {
@@ -45,6 +59,7 @@ function htmlRouteAliases() {
 }
 
 export default defineConfig({
+    base: siteBase,
     plugins: [htmlRouteAliases()],
     server: {
         open: "/"
@@ -57,7 +72,8 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, "index.html"),
                 portfolio: resolve(__dirname, "portfolio/index.html"),
-                contact: resolve(__dirname, "contact/index.html")
+                contact: resolve(__dirname, "contact/index.html"),
+                contactThankYou: resolve(__dirname, "contact/bedankt/index.html")
             }
         }
     }

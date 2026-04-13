@@ -16,7 +16,7 @@
     <a class="skip-link" href="#inhoud">Ga direct naar de inhoud</a>
     <header class="site-header">
         <div class="container header-shell">
-            <a class="brand" href="/">
+            <a class="brand" href="%BASE_URL%">
                 <img src="/resources/logo/LogoDeKleineKlusKoning.png" alt="Logo van De kleine Klus Koning" width="96" height="96">
                 <span class="brand-text">
                     <span class="brand-title">De kleine Klus Koning</span>
@@ -29,52 +29,34 @@
                 <span></span>
             </button>
             <nav class="site-nav" id="site-nav" aria-label="Hoofdnavigatie">
-                <a href="/">Home</a>
-                <a href="/portfolio/">Portfolio</a>
-                <a href="/contact/" aria-current="page">Contact</a>
+                <a href="%BASE_URL%">Home</a>
+                <a href="%BASE_URL%portfolio/">Portfolio</a>
+                <a href="%BASE_URL%contact/" aria-current="page">Contact</a>
             </nav>
         </div>
     </header>
 
     <main id="inhoud">
-        <section class="page-hero">
-            <div class="container page-hero-grid">
-                <div class="page-hero-copy">
-                    <p class="eyebrow">Contact voor kleine klussen</p>
-                    <h1>Vraag direct een offerte aan in Hoofddorp</h1>
-                    <p class="lead">Heeft u een reparatie, montageklus of onderhoudswerk dat netjes moet worden uitgevoerd? Vul het formulier in en beschrijf kort uw klus. Zo wordt snel duidelijk wat nodig is en hoe De kleine Klus Koning u het best kan helpen.</p>
+        <section class="hero hero-minimal">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Klusjesman Hoofddorp voor snel en net werk</p>
+                    <h1>Neem direct contact op met De kleine Klus Koning</h1>
                 </div>
-
-                <aside class="page-hero-panel">
-                    <span class="service-badge">Snel schakelen</span>
-                    <h2>Heldere aanvraag, snelle opvolging</h2>
-                    <p>Een goed contactmoment zorgt voor minder heen en weer. Beschrijf daarom waar de klus is, wat er moet gebeuren en of het om montage, onderhoud of een reparatie gaat.</p>
-                    <div class="stats-grid">
-                        <div>
-                            <strong>Hoofddorp</strong>
-                            <span>Lokale focus</span>
-                        </div>
-                        <div>
-                            <strong>Kleine klussen</strong>
-                            <span>Praktisch geregeld</span>
-                        </div>
-                        <div>
-                            <strong>Offerte</strong>
-                            <span>Duidelijk en direct</span>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </section>
-
-        <section class="section">
+        <section class="section section-top-compact">
             <div class="container contact-layout">
                 <article class="contact-form-card">
                     <span class="service-badge">Contactformulier</span>
                     <h2>Vertel kort welke klus u wilt laten uitvoeren</h2>
                     <p>Dit formulier is ingericht voor huiseigenaren die snel een aanvraag willen indienen voor een klusjesman in Hoofddorp.</p>
 
-                    <form class="contact-form" action="#" method="post">
+                    <form class="contact-form" action="https://formsubmit.co/8f1bb0f074e635e752e6fe09061ec6d6" method="post" data-formsubmit-next-path="contact/bedankt/">
+                        <input type="hidden" name="_subject" value="Nieuwe aanvraag via dekleinekluskoning.nl">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_next" value="">
                         <div class="field">
                             <label for="naam">Naam</label>
                             <input id="naam" name="naam" type="text" autocomplete="name" required>
@@ -87,19 +69,18 @@
                             <label for="bericht">Bericht</label>
                             <textarea id="bericht" name="bericht" rows="6" placeholder="Beschrijf uw klus, locatie in Hoofddorp en gewenste planning." required></textarea>
                         </div>
-                        <button class="button button-wide" type="submit">Vraag direct een offerte aan in Hoofddorp</button>
-                        <p class="supporting-text">Een duidelijke omschrijving helpt om sneller een passende reactie te geven op uw kleine klus in Hoofddorp.</p>
+                        <button class="button button-wide" type="submit">Neem direct contact op</button>
                     </form>
                 </article>
 
                 <aside class="info-card">
-                    <span class="service-badge">Waarom dit werkt</span>
-                    <h2>Conversiegericht, duidelijk en lokaal relevant</h2>
-                    <p>De contactpagina ondersteunt bezoekers die direct in actie willen komen. Door de lokale focus op Hoofddorp en de heldere call-to-action sluit de pagina goed aan op zoekintentie en conversie.</p>
+                    <span class="service-badge">Waarom kiezen voor de Kleine Klus Koning</span>
+                    <h2>Lokaal, persoonlijk en meedenkend</h2>
+                    <p>Neem direct contact op met de Kleine Klus Koning uit Hoofddorp en krijg binnen 24 uur reactie.</p>
                     <ul class="benefit-list">
-                        <li>Heldere call-to-action voor bezoekers die direct willen aanvragen.</li>
-                        <li>Korte en toegankelijke opbouw voor mobiel, tablet en desktop.</li>
-                        <li>SEO-vriendelijke content rond klusjesman Hoofddorp en kleine klus Hoofddorp.</li>
+                        <li>Een klusjesman uit de buurt die snel en vakkundig kleine klussen uitvoert.</li>
+                        <li>Persoonlijke aanpak en duidelijke communicatie voor elke klus.</li>
+                        <li>Iemand die meedenkt en oplossingen biedt voor uw specifieke situatie.</li>
                     </ul>
                 </aside>
             </div>
@@ -110,9 +91,9 @@
         <div class="container footer-shell">
             <p class="footer-note">Contacteer De kleine Klus Koning voor reparatie, onderhoud of montage in Hoofddorp.</p>
             <nav class="footer-links" aria-label="Footer navigatie">
-                <a href="/">Home</a>
-                <a href="/portfolio/">Portfolio</a>
-                <a href="/contact/">Contact</a>
+                <a href="%BASE_URL%">Home</a>
+                <a href="%BASE_URL%portfolio/">Portfolio</a>
+                <a href="%BASE_URL%contact/">Contact</a>
             </nav>
         </div>
     </footer>
