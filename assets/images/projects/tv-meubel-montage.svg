@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">TV meubel montage in Hoofddorp</title>
+  <desc id="desc">Visual van een zwevend tv-meubel dat strak aan de muur is gemonteerd.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8e0d8"/>
+      <stop offset="100%" stop-color="#f5f2ee"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#c8a97a"/>
+      <stop offset="100%" stop-color="#a8844e"/>
+    </linearGradient>
+  </defs>
+  <!-- Background wall -->
+  <rect width="1200" height="900" fill="#173046"/>
+  <rect x="80" y="80" width="1040" height="740" rx="36" fill="url(#bg)"/>
+  <!-- Wall -->
+  <rect x="80" y="80" width="1040" height="580" rx="0" fill="#f0ede8"/>
+  <rect x="80" y="80" width="1040" height="36" rx="36" fill="#f0ede8"/>
+  <!-- Floor (herringbone pattern) -->
+  <rect x="80" y="620" width="1040" height="200" fill="url(#floor)"/>
+  <!-- Herringbone floor lines -->
+  <g stroke="#9a7040" stroke-width="1.5" opacity="0.5">
+    <line x1="80" y1="660" x2="240" y2="820"/><line x1="160" y1="620" x2="320" y2="780"/>
+    <line x1="240" y1="620" x2="400" y2="780"/><line x1="320" y1="620" x2="480" y2="780"/>
+    <line x1="400" y1="620" x2="560" y2="780"/><line x1="480" y1="620" x2="640" y2="780"/>
+    <line x1="560" y1="620" x2="720" y2="780"/><line x1="640" y1="620" x2="800" y2="780"/>
+    <line x1="720" y1="620" x2="880" y2="780"/><line x1="800" y1="620" x2="960" y2="780"/>
+    <line x1="880" y1="620" x2="1040" y2="780"/><line x1="960" y1="620" x2="1120" y2="780"/>
+    <line x1="80" y1="740" x2="200" y2="820"/><line x1="1040" y1="660" x2="880" y2="820"/>
+  </g>
+  <!-- Floating TV meubel cabinet -->
+  <rect x="150" y="440" width="900" height="140" rx="8" fill="#f8f8f8"/>
+  <rect x="150" y="440" width="900" height="10" rx="4" fill="#eeeeee"/>
+  <!-- Cabinet doors -->
+  <line x1="450" y1="450" x2="450" y2="580" stroke="#e0e0e0" stroke-width="2"/>
+  <line x1="750" y1="450" x2="750" y2="580" stroke="#e0e0e0" stroke-width="2"/>
+  <!-- Door handles -->
+  <rect x="448" y="508" width="4" height="24" rx="2" fill="#cccccc"/>
+  <rect x="748" y="508" width="4" height="24" rx="2" fill="#cccccc"/>
+  <!-- Shadow beneath cabinet -->
+  <ellipse cx="600" cy="582" rx="440" ry="10" fill="#00000022"/>
+  <!-- Wall mount bracket hint -->
+  <rect x="565" y="430" width="70" height="12" rx="4" fill="#dddddd"/>
+</svg>
