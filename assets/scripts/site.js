@@ -185,12 +185,10 @@ document.querySelectorAll("form[data-formsubmit-next-path]").forEach((form) => {
     const nextInput = form.querySelector('input[name="_next"]');
     form.action = `https://formsubmit.co/${formsubmitMailboxLocalPart}@${formsubmitMailboxDomain}`;
 
-    if (!nextPath || !nextInput) {
-        return;
+    if (nextPath && nextInput) {
+        const normalizedNextPath = nextPath.replace(/^\/+/, "");
+        nextInput.value = new URL(normalizedNextPath, siteBaseUrl).toString();
     }
-
-    const normalizedNextPath = nextPath.replace(/^\/+/, "");
-    nextInput.value = new URL(normalizedNextPath, siteBaseUrl).toString();
 });
 
 const lightbox = document.querySelector("[data-lightbox]");
