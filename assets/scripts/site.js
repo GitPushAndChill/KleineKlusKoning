@@ -177,17 +177,18 @@ const initializeCarousel = (carousel) => {
 document.querySelectorAll("[data-carousel]").forEach(initializeCarousel);
 
 const siteBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+const formsubmitMailboxLocalPart = ["kleine", "klus", "koning"].join("");
+const formsubmitMailboxDomain = ["gmail", "com"].join(".");
 
 document.querySelectorAll("form[data-formsubmit-next-path]").forEach((form) => {
     const nextPath = form.dataset.formsubmitNextPath;
     const nextInput = form.querySelector('input[name="_next"]');
+    form.action = `https://formsubmit.co/${formsubmitMailboxLocalPart}@${formsubmitMailboxDomain}`;
 
-    if (!nextPath || !nextInput) {
-        return;
+    if (nextPath && nextInput) {
+        const normalizedNextPath = nextPath.replace(/^\/+/, "");
+        nextInput.value = new URL(normalizedNextPath, siteBaseUrl).toString();
     }
-
-    const normalizedNextPath = nextPath.replace(/^\/+/, "");
-    nextInput.value = new URL(normalizedNextPath, siteBaseUrl).toString();
 });
 
 const lightbox = document.querySelector("[data-lightbox]");
