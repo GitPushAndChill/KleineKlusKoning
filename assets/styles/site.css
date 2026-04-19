@@ -1170,7 +1170,7 @@ body.lightbox-open {
 
     .cta-banner h2 {
         font-size: clamp(1.7rem, 9vw, 2.3rem);
-        line-height: 1.08;
+        line-height: 1.2;
     }
 
     .cta-banner .button {
