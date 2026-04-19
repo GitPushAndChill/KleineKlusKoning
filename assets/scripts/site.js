@@ -177,16 +177,13 @@ const initializeCarousel = (carousel) => {
 document.querySelectorAll("[data-carousel]").forEach(initializeCarousel);
 
 const siteBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+const formsubmitMailboxLocalPart = ["kleine", "klus", "koning"].join("");
+const formsubmitMailboxDomain = ["gmail", "com"].join(".");
 
 document.querySelectorAll("form[data-formsubmit-next-path]").forEach((form) => {
     const nextPath = form.dataset.formsubmitNextPath;
     const nextInput = form.querySelector('input[name="_next"]');
-    const formsubmitUser = form.dataset.formsubmitUser;
-    const formsubmitDomain = form.dataset.formsubmitDomain;
-
-    if (formsubmitUser && formsubmitDomain) {
-        form.action = `https://formsubmit.co/${formsubmitUser}@${formsubmitDomain}`;
-    }
+    form.action = `https://formsubmit.co/${formsubmitMailboxLocalPart}@${formsubmitMailboxDomain}`;
 
     if (!nextPath || !nextInput) {
         return;
