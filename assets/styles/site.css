@@ -772,14 +772,18 @@ textarea {
 }
 
 .cta-banner {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     gap: 1.4rem;
     padding: 2rem;
     border-radius: var(--radius-lg);
     background: linear-gradient(135deg, rgba(255, 209, 102, 0.95), rgba(255, 170, 38, 0.92));
     box-shadow: var(--shadow-lg);
+}
+
+.cta-banner .button {
+    justify-self: end;
 }
 
 .project-grid {
@@ -1158,6 +1162,22 @@ body.lightbox-open {
         grid-template-columns: 1fr;
     }
 
+    .cta-banner {
+        align-items: start;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .cta-banner h2 {
+        font-size: clamp(1.7rem, 9vw, 2.3rem);
+        line-height: 1.08;
+    }
+
+    .cta-banner .button {
+        justify-self: start;
+        margin-top: 0.25rem;
+    }
+
     .hero,
     .page-hero {
         padding-top: 1rem;
@@ -1231,6 +1251,14 @@ body.lightbox-open {
 
     .project-card {
         grid-column: span 12;
+    }
+
+    .cta-banner {
+        padding: 1.2rem;
+    }
+
+    .cta-banner .button {
+        width: 100%;
     }
 
     .project-gallery-button {
