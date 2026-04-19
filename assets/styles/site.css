@@ -1169,7 +1169,7 @@ body.lightbox-open {
     }
 
     .cta-banner h2 {
-        font-size: clamp(1.7rem, 9vw, 2.3rem);
+        font-size: 2.05rem;
         line-height: 1.2;
     }
 
@@ -1255,6 +1255,10 @@ body.lightbox-open {
 
     .cta-banner {
         padding: 1.2rem;
+    }
+
+    .cta-banner h2 {
+        font-size: 1.8rem;
     }
 
     .cta-banner .button {
