@@ -1163,7 +1163,7 @@ body.lightbox-open {
     }
 
     .cta-banner {
-        align-items: start;
+        align-items: flex-start;
         gap: 1rem;
         padding: 1.5rem;
     }
