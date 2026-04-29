@@ -38,7 +38,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          SITE_BASE: /${{ github.event.repository.name }}/
+          SITE_BASE: /
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

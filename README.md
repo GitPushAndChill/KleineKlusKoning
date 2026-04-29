@@ -31,16 +31,29 @@ Een lokale preview van de build start u met:
 
 De repo bevat een workflow in `.github/workflows/deploy-pages.yml` die de site bij iedere push naar `main` buildt en publiceert naar GitHub Pages.
 
+De productiebuild is ingericht voor het custom domain `kleinekluskoning.nl`:
+
+- de workflow bouwt met base-path `/`
+- `public/CNAME` wordt meegekopieerd naar de Pages-artifact
+
 Eenmalig instellen in GitHub:
 
 1. Ga naar `Settings` > `Pages`.
 2. Kies bij `Source` voor `GitHub Actions`.
+3. Controleer dat `Custom domain` op `kleinekluskoning.nl` staat.
+4. Zet `Enforce HTTPS` aan zodra GitHub Pages meldt dat het certificaat actief is.
 
-De workflow zet automatisch de juiste base-path voor een projectsite op GitHub Pages, zodat routes zoals `/portfolio/` en `/contact/` ook onder het repo-subpad blijven werken.
+Benodigde DNS-records voor het domein:
+
+- `A` record voor `kleinekluskoning.nl` naar `185.199.108.153`
+- `A` record voor `kleinekluskoning.nl` naar `185.199.109.153`
+- `A` record voor `kleinekluskoning.nl` naar `185.199.110.153`
+- `A` record voor `kleinekluskoning.nl` naar `185.199.111.153`
+- `CNAME` record voor `www.kleinekluskoning.nl` naar `GitPushAndChill.github.io`
 
 Voor een lokale controle van een GitHub Pages-build kunt u dit gebruiken:
 
-`$env:SITE_BASE='/KleineKlusKoning/'; npm run build`
+`$env:SITE_BASE='/'; npm run build`
 
 ## Contactformulier
 
