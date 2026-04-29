@@ -176,7 +176,7 @@ const initializeCarousel = (carousel) => {
 
 document.querySelectorAll("[data-carousel]").forEach(initializeCarousel);
 
-const siteBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+const siteBaseUrl = new URL("/", window.location.origin);
 const formsubmitMailboxLocalPart = ["kleine", "klus", "koning"].join("");
 const formsubmitMailboxDomain = ["gmail", "com"].join(".");
 

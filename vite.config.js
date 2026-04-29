@@ -1,19 +1,10 @@
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-function normalizeBasePath(basePath = "/") {
-    if (!basePath || basePath === "/") {
-        return "/";
-    }
-
-    const withLeadingSlash = basePath.startsWith("/") ? basePath : `/${basePath}`;
-    return withLeadingSlash.endsWith("/") ? withLeadingSlash : `${withLeadingSlash}/`;
-}
-
-const siteBase = normalizeBasePath(process.env.SITE_BASE);
+const cnameFilePath = resolve(__dirname, "CNAME");
 
 const htmlRoutes = new Map([
     ["/", "/index.html"],
@@ -58,9 +49,29 @@ function htmlRouteAliases() {
     };
 }
 
+function emitRootCname() {
+    return {
+        name: "emit-root-cname",
+        apply: "build",
+        generateBundle() {
+            if (!existsSync(cnameFilePath)) {
+                return;
+            }
+
+            const cnameContents = `${readFileSync(cnameFilePath, "utf8").trim()}\n`;
+
+            this.emitFile({
+                type: "asset",
+                fileName: "CNAME",
+                source: cnameContents
+            });
+        }
+    };
+}
+
 export default defineConfig({
-    base: siteBase,
-    plugins: [htmlRouteAliases()],
+    base: "/",
+    plugins: [htmlRouteAliases(), emitRootCname()],
     server: {
         open: "/"
     },

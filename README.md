@@ -33,8 +33,8 @@ De repo bevat een workflow in `.github/workflows/deploy-pages.yml` die de site b
 
 De productiebuild is ingericht voor het custom domain `kleinekluskoning.nl`:
 
-- de workflow bouwt met base-path `/`
-- `public/CNAME` wordt meegekopieerd naar de Pages-artifact
+- de HTML gebruikt vaste root-links zoals `/portfolio/` en `/contact/`
+- het rootbestand `CNAME` wordt automatisch meegekopieerd naar de Pages-artifact
 
 Eenmalig instellen in GitHub:
 
@@ -51,9 +51,9 @@ Benodigde DNS-records voor het domein:
 - `A` record voor `kleinekluskoning.nl` naar `185.199.111.153`
 - `CNAME` record voor `www.kleinekluskoning.nl` naar `GitPushAndChill.github.io`
 
-Voor een lokale controle van een GitHub Pages-build kunt u dit gebruiken:
+Voor een lokale controle van de productiebuild volstaat:
 
-`$env:SITE_BASE='/'; npm run build`
+`npm run build`
 
 ## Contactformulier
 
