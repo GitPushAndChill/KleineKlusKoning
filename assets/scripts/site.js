@@ -1,6 +1,85 @@
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
+const populateHomeGallery = () => {
+    const gallery = document.querySelector("[data-home-gallery]");
+
+    if (!gallery) {
+        return;
+    }
+
+    const imageModules = import.meta.glob("../images/projects/*.{jpg,jpeg,png,webp,avif}", {
+        eager: true,
+        import: "default"
+    });
+
+    const imageUrls = Object.values(imageModules).filter(Boolean).sort((a, b) => {
+        const aName = a.split("/").pop() || "";
+        const bName = b.split("/").pop() || "";
+        return aName.localeCompare(bName);
+    });
+
+    if (imageUrls.length === 0) {
+        gallery.remove();
+        return;
+    }
+
+    const frame = document.createElement("div");
+    frame.className = "project-gallery-frame";
+    frame.setAttribute("tabindex", "0");
+    frame.setAttribute("aria-label", "Galerij met recente klussen");
+
+    const controls = document.createElement("div");
+    controls.className = "project-gallery-controls";
+    controls.setAttribute("aria-label", "Fotogalerij van recente klussen");
+
+    const previousButton = document.createElement("button");
+    previousButton.type = "button";
+    previousButton.className = "project-gallery-button";
+    previousButton.setAttribute("data-carousel-prev", "");
+    previousButton.setAttribute("aria-label", "Vorige foto");
+    previousButton.innerHTML = "&#8249;";
+
+    const dots = document.createElement("div");
+    dots.className = "project-gallery-dots";
+    dots.setAttribute("aria-label", "Kies een foto");
+
+    const nextButton = document.createElement("button");
+    nextButton.type = "button";
+    nextButton.className = "project-gallery-button";
+    nextButton.setAttribute("data-carousel-next", "");
+    nextButton.setAttribute("aria-label", "Volgende foto");
+    nextButton.innerHTML = "&#8250;";
+
+    imageUrls.forEach((imageUrl, index) => {
+        const slide = document.createElement("div");
+        slide.className = `project-gallery-slide${index === 0 ? " is-active" : ""}`;
+        slide.setAttribute("data-carousel-slide", "");
+        slide.setAttribute("aria-hidden", String(index !== 0));
+
+        const img = document.createElement("img");
+        img.src = imageUrl;
+        img.alt = "Recente klus van De kleine Klus Koning";
+        img.width = 1200;
+        img.height = 900;
+        img.loading = "lazy";
+
+        slide.appendChild(img);
+        frame.appendChild(slide);
+
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = `project-gallery-dot${index === 0 ? " is-active" : ""}`;
+        dot.setAttribute("data-carousel-dot", "");
+        dot.setAttribute("aria-label", `Toon foto ${index + 1}`);
+        dot.setAttribute("aria-pressed", String(index === 0));
+        dots.appendChild(dot);
+    });
+
+    controls.append(previousButton, dots, nextButton);
+    gallery.replaceChildren(frame, controls);
+};
+
 if (navToggle && siteNav) {
     navToggle.addEventListener("click", () => {
         const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -174,6 +253,7 @@ const initializeCarousel = (carousel) => {
     };
 };
 
+populateHomeGallery();
 document.querySelectorAll("[data-carousel]").forEach(initializeCarousel);
 
 const siteBaseUrl = new URL("/", window.location.origin);

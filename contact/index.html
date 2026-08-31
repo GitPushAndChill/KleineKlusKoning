@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact klusjesman Hoofddorp | Neem direct contact op voor je klus</title>
+    <title>Contact klusjesman Hoofddorp | Neem direct contact op voor uw klus</title>
     <meta name="description" content="Neem contact op met De kleine Klus Koning en vraag direct een offerte aan voor een kleine klus in Hoofddorp. Duidelijke service voor reparatie, onderhoud en montage.">
     <meta name="theme-color" content="#142332">
     <meta property="og:type" content="website">
@@ -65,9 +65,9 @@
                 <article class="contact-form-card">
                     <span class="service-badge">Contactformulier</span>
                     <h2>Vertel kort welke klus u wilt laten uitvoeren</h2>
-                    <p>Dit formulier is ingericht voor huiseigenaren die snel een aanvraag willen indienen voor een klusjesman in Hoofddorp.</p>
+                    <p>Via dit formulier kunt u direct contact opnemen met de Kleine Klus Koning uit Hoofddorp.</p>
 
-                    <form class="contact-form" action="https://formsubmit.co/kleinekluskoning@gmail.com" method="post" data-formsubmit-next-path="contact/bedankt/">
+                    <form class="contact-form" action="https://formsubmit.co/kleinekluskoning@gmail.com" method="post" enctype="multipart/form-data" data-formsubmit-next-path="contact/bedankt/">
                         <input type="hidden" name="_subject" value="Nieuwe aanvraag via dekleinekluskoning.nl">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="true">
@@ -87,6 +87,11 @@
                         <div class="field">
                             <label for="bericht">Bericht</label>
                             <textarea id="bericht" name="bericht" rows="6" placeholder="Beschrijf uw klus, locatie in Hoofddorp en gewenste planning." required></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="foto">Foto bijvoegen (optioneel)</label>
+                            <input id="foto" name="foto" type="file" accept="image/png, image/jpeg, image/webp, image/jpg" aria-describedby="foto-help">
+                            <small id="foto-help">Maximaal een foto uploaden. Alleen .jpg, .jpeg, .png of .webp.</small>
                         </div>
                         <button class="button button-wide" type="submit">Neem direct contact op</button>
                     </form>
