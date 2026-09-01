@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /contact/
+Allow: /portfolio/
+Allow: /contact/bedankt/
+
+Sitemap: https://dekleinekluskoning.nl/sitemap.xml
