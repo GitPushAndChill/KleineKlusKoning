@@ -17,6 +17,14 @@ Beschikbare pagina's tijdens lokaal ontwikkelen:
 - `/portfolio/`
 - `/contact/`
 
+## Foto's op de homepage
+
+Beheer de foto's in de carrousel op de homepage via `config/home-gallery.json`.
+Voeg objecten toe aan of verwijder ze uit de `images`-lijst om foto's te tonen
+of te verbergen. De volgorde in de lijst is de volgorde van de carrousel.
+Gebruik bij `file` alleen een bestandsnaam uit `assets/images/projects/` en
+vul voor iedere foto een passende `alt`-tekst in.
+
 ## Productiebouw
 
 Gebruik voor een build:

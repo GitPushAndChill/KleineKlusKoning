@@ -1,3 +1,5 @@
+import homeGalleryConfig from "../../config/home-gallery.json";
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
@@ -12,14 +14,45 @@ const populateHomeGallery = () => {
         eager: true,
         import: "default"
     });
+    const imageUrlsByName = new Map(
+        Object.entries(imageModules).map(([path, url]) => [path.split("/").pop(), url])
+    );
+    const configuredImages = homeGalleryConfig.images;
 
-    const imageUrls = Object.values(imageModules).filter(Boolean).sort((a, b) => {
-        const aName = a.split("/").pop() || "";
-        const bName = b.split("/").pop() || "";
-        return aName.localeCompare(bName);
-    });
+    if (!Array.isArray(configuredImages)) {
+        console.error("Homepage carousel config error: `images` must be an array.");
+        gallery.remove();
+        return;
+    }
 
-    if (imageUrls.length === 0) {
+    const seenFiles = new Set();
+    const images = [];
+
+    for (const [index, image] of configuredImages.entries()) {
+        if (
+            !image
+            || typeof image.file !== "string"
+            || typeof image.alt !== "string"
+            || !image.alt.trim()
+            || seenFiles.has(image.file)
+        ) {
+            console.error(`Homepage carousel config error: invalid or duplicate image at position ${index + 1}.`);
+            gallery.remove();
+            return;
+        }
+
+        const url = imageUrlsByName.get(image.file);
+        if (!url) {
+            console.error(`Homepage carousel config error: image "${image.file}" was not found in assets/images/projects.`);
+            gallery.remove();
+            return;
+        }
+
+        seenFiles.add(image.file);
+        images.push({ url, alt: image.alt });
+    }
+
+    if (images.length === 0) {
         gallery.remove();
         return;
     }
@@ -51,18 +84,22 @@ const populateHomeGallery = () => {
     nextButton.setAttribute("aria-label", "Volgende foto");
     nextButton.innerHTML = "&#8250;";
 
-    imageUrls.forEach((imageUrl, index) => {
+    images.forEach((image, index) => {
         const slide = document.createElement("div");
         slide.className = `project-gallery-slide${index === 0 ? " is-active" : ""}`;
         slide.setAttribute("data-carousel-slide", "");
         slide.setAttribute("aria-hidden", String(index !== 0));
 
         const img = document.createElement("img");
-        img.src = imageUrl;
-        img.alt = "Recente klus van De kleine Klus Koning";
+        img.src = image.url;
+        img.alt = image.alt;
         img.width = 1200;
         img.height = 900;
-        img.loading = "lazy";
+        img.loading = index === 0 ? "eager" : "lazy";
+        img.decoding = "async";
+        if (index === 0) {
+            img.setAttribute("fetchpriority", "high");
+        }
 
         slide.appendChild(img);
         frame.appendChild(slide);
@@ -76,7 +113,11 @@ const populateHomeGallery = () => {
         dots.appendChild(dot);
     });
 
-    controls.append(previousButton, dots, nextButton);
+    if (images.length > 1) {
+        controls.append(previousButton, dots, nextButton);
+    } else {
+        controls.hidden = true;
+    }
     gallery.replaceChildren(frame, controls);
 };
 
@@ -101,10 +142,18 @@ const initializeCarousel = (carousel) => {
     const previousButton = carousel.querySelector("[data-carousel-prev]");
     const nextButton = carousel.querySelector("[data-carousel-next]");
     const autoplayEnabled = carousel.dataset.carouselAutoplay === "true";
-    const autoplayDelay = Number(carousel.dataset.carouselDelay || 5000);
+    const configuredDelay = Number(carousel.dataset.carouselDelay || 5000);
+    const autoplayDelay = Number.isFinite(configuredDelay) && configuredDelay >= 1000
+        ? configuredDelay
+        : 5000;
 
     if (slides.length === 0) {
         return;
+    }
+
+    const controls = carousel.querySelector(".project-gallery-controls");
+    if (controls && slides.length < 2) {
+        controls.hidden = true;
     }
 
     let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));

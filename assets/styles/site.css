@@ -913,6 +913,10 @@ textarea {
     gap: 0.75rem;
 }
 
+.project-gallery-controls[hidden] {
+    display: none;
+}
+
 .project-gallery-button,
 .project-gallery-dot {
     border: 0;
