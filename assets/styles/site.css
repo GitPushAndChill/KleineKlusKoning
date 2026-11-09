@@ -569,6 +569,15 @@ textarea {
     letter-spacing: -0.04em;
 }
 
+.contact-form-heading {
+    margin: 1.5rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(23, 33, 43, 0.1);
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
 .hero-service-card-minimal {
     padding: 1.1rem 1.15rem;
 }
