@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 Allow: /index.html
+Allow: /diensten/
 Allow: /contact/
 Allow: /portfolio/
-Allow: /contact/bedankt/
 
 Sitemap: https://kleinekluskoning.nl/sitemap.xml

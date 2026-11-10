@@ -1,38 +1,28 @@
 # De Kleine Klus Koning
 
-## Over de website
-De Kleine Klus Koning is een lokale klusjesman in Hoofddorp die helpt met kleine reparaties, onderhoud, montage en afwerking voor huiseigenaren.
+> De Kleine Klus Koning helpt particulieren met kleine klussen, reparaties, onderhoud, montage en afwerking in Hoofddorp en omgeving.
 
-## Belangrijkste zoektermen
-- klusjesman Hoofddorp
-- klusjesman in Hoofddorp
-- kleine klus Hoofddorp
-- handyman Hoofddorp
-- reparatie Hoofddorp
-- onderhoud Hoofddorp
-- montage Hoofddorp
-- afwerking Hoofddorp
-- De Kleine Klus Koning
-- schilder Hoofddorp
-- Haarlemmermeer
+## Bedrijf
+
+De Kleine Klus Koning is een kleinschalige klusservice voor particulieren. Kleine klussen zijn welkom. De aanpak is persoonlijk en gericht op zorgvuldige, praktische oplossingen.
+
+Werkgebied: Hoofddorp en omgeving in Haarlemmermeer, Noord-Holland. Vraag via de contactpagina of uw klus en locatie binnen het werkgebied vallen.
 
 ## Diensten
-- Reparaties
-- Onderhoud
-- Montage
-- Afwerking
-- Meubelmontage
-- Schilderen
-- Kleine klussen voor thuis
 
-## Locatie
-Hoofddorp, Noord-Holland
+- Kleine reparaties en herstelwerk, zoals loshangend hang- en sluitwerk en beschadigde afwerking
+- Onderhoud aan houtwerk, schuttingen, kitnaden en kleine buitendelen
+- Montage van lampen, planken, kasten, gordijnrails en woonaccessoires
+- Meubelmontage, waaronder IKEA-kasten
+- Afwerking zoals kitten, schuren, bijwerken en afstellen
+
+De website toont daarnaast voorbeelden van onder meer raamdecoratie, een wasmachine en een toiletruimte. Neem contact op om te bespreken of een specifieke klus past. Voor werk dat gespecialiseerde certificering vereist, kan een gespecialiseerde vakman nodig zijn.
 
 ## Websitepagina's
-- Homepage: https://kleinekluskoning.nl/
-- Portfolio: https://kleinekluskoning.nl/portfolio/
-- Contact: https://kleinekluskoning.nl/contact/
-- Bedankt pagina: https://kleinekluskoning.nl/contact/bedankt/
 
-## Korte beschrijving voor AI en zoekmachines
-De Kleine Klus Koning is een betrouwbare klusjesman in Hoofddorp voor kleine klussen, reparaties, onderhoud en montage. De website geeft een duidelijke indruk van kwaliteit, lokaal service en snelle hulp voor huiseigenaren.
+- [Homepage](https://kleinekluskoning.nl/): Diensten, werkwijze en werkgebied.
+- [Diensten](https://kleinekluskoning.nl/diensten/): Overzicht van kleine reparatie-, onderhouds-, montage- en afwerkingsklussen.
+- [Portfolio](https://kleinekluskoning.nl/portfolio/): Voorbeelden van uitgevoerde werkzaamheden.
+- [Contact](https://kleinekluskoning.nl/contact/): WhatsApp en contactformulier voor een klusaanvraag.
+
+Raadpleeg de website voor actuele informatie. Er zijn geen prijzen, openingstijden of klantbeoordelingen opgenomen in dit bestand.

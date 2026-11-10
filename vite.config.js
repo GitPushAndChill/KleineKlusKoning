@@ -8,6 +8,9 @@ const cnameFilePath = resolve(__dirname, "CNAME");
 
 const htmlRoutes = new Map([
     ["/", "/index.html"],
+    ["/diensten", "/diensten/index.html"],
+    ["/diensten/", "/diensten/index.html"],
+    ["/diensten.html", "/diensten/index.html"],
     ["/portfolio", "/portfolio/index.html"],
     ["/portfolio/", "/portfolio/index.html"],
     ["/portfolio.html", "/portfolio/index.html"],
@@ -82,6 +85,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
+                services: resolve(__dirname, "diensten/index.html"),
                 portfolio: resolve(__dirname, "portfolio/index.html"),
                 contact: resolve(__dirname, "contact/index.html"),
                 contactThankYou: resolve(__dirname, "contact/bedankt/index.html")
