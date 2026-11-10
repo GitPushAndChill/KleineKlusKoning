@@ -14,6 +14,7 @@ De site draait daarna lokaal via Vite en opent direct op de homepage via `/`.
 Beschikbare pagina's tijdens lokaal ontwikkelen:
 
 - `/`
+- `/diensten/`
 - `/portfolio/`
 - `/contact/`
 

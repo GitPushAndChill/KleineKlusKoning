@@ -293,6 +293,71 @@ textarea {
     margin-right: 0.35rem;
 }
 
+.google-review-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 100%;
+    margin-top: 0.85rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(23, 33, 43, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 8px 20px rgba(14, 22, 30, 0.05);
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.google-review-badge:hover,
+.google-review-badge:focus-visible {
+    border-color: rgba(183, 112, 0, 0.38);
+    box-shadow: 0 12px 24px rgba(14, 22, 30, 0.09);
+    transform: translateY(-1px);
+}
+
+.google-review-badge:focus-visible {
+    outline: 3px solid rgba(245, 163, 0, 0.38);
+    outline-offset: 3px;
+}
+
+.google-review-rating {
+    color: var(--ink);
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.google-review-details {
+    display: grid;
+    gap: 0.12rem;
+}
+
+.google-review-stars {
+    color: var(--accent-deep);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+}
+
+.google-review-caption {
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.google-review-arrow {
+    align-self: flex-start;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.review-badge-section {
+    padding: 1rem 0 0;
+    text-align: center;
+}
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -727,6 +792,19 @@ textarea {
     font-size: 1.35rem;
     line-height: 1.08;
     letter-spacing: -0.04em;
+}
+
+.service-detail-list {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+}
+
+.service-detail-list li::marker {
+    color: var(--accent-deep);
 }
 
 .carousel {
